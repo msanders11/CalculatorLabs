@@ -34,19 +34,30 @@ public class AreaCalculatorController3 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-                try {
-            String length = request.getParameter("length");
-            String width = request.getParameter("width");
 
+        String length = request.getParameter("length");
+        String width = request.getParameter("width");
+        String radius = request.getParameter("radius");
+        String side1 = request.getParameter("side1");
+        String side2 = request.getParameter("side2");
+        String calcType = request.getParameter("calcType");
+        try {
             AreaCalculatorModel acm = new AreaCalculatorModel();
-            String area = acm.setRectangleValues(length, width);
+            if (calcType.equalsIgnoreCase("rectangle")) {
+                String area = acm.getRectangleArea(length, width);
+                request.setAttribute("area", area);
+            } else if(calcType.equalsIgnoreCase("circle")){
+                String circleArea = acm.getCircleArea(radius);
+                request.setAttribute("circleArea", circleArea);
+            }else{
+                String triangleLength = acm.getMissingTriangleLength(side1, side2);
+                request.setAttribute("triangleLength", triangleLength);
+            }
 
-            request.setAttribute("area", area);
         } catch (Exception e) {
 
         }
-        
+
         RequestDispatcher view
                 = request.getRequestDispatcher("/lab3.jsp"); // Where you are sending the data
         view.forward(request, response);

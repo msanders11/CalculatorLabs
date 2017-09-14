@@ -35,7 +35,7 @@ public class AreaCalculatorController extends HttpServlet {
             String width = request.getParameter("width");
 
             AreaCalculatorModel acm = new AreaCalculatorModel();
-            String area = acm.setRectangleValues(length, width);
+            String area = acm.getRectangleArea(length, width);
 
             request.setAttribute("area", area);
         } catch (Exception e) {
