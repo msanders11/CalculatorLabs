@@ -4,10 +4,15 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Sep 12, 2017, 9:24:43 PM
+    Created on : Sep 14, 2017, 6:21:43 PM
     Author     : Mike
 */
+
 body{
-    background-color: #99ccff;
-    font-size: 1.25em;
+    background-color:#e1e1e1;
+    font-size: 1em;
+    font-family: sans-serif;
+    padding: 75px;
+    padding-top: 50px;
+    border: 5px solid black;
 }

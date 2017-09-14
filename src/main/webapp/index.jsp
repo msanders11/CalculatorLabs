@@ -13,14 +13,16 @@
         <title>Home Page</title>
     </head>
     <body>
-        <h1>Calculator Labs</h1>
-        <h2>Lab 1</h2>
-        <a href="lab1.jsp">Click Here</a>
+        <div>
+            <h1>Calculator Labs</h1>
+            <h2>Lab 1</h2>
+            <a href="lab1.jsp">Click Here</a>
 
-        <h2>Lab 2</h2>
-        <a href="lab2.jsp">Click Here</a>
+            <h2>Lab 2</h2>
+            <a href="lab2.jsp">Click Here</a>
 
-        <h2>Lab 3</h2>
-        <a href="lab3.jsp">Click Here</a>
+            <h2>Lab 3</h2>
+            <a href="lab3.jsp">Click Here</a>
+        </div>
     </body>
 </html>
